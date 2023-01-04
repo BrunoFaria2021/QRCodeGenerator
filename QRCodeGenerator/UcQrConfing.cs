@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entities.Configurations;
+using System;
 using System.Windows.Forms;
 
 namespace QRCodeGenerator
@@ -102,6 +96,23 @@ namespace QRCodeGenerator
             cmbQZone.SelectedIndex = 0;
             cmbFormat.SelectedIndex = 0;
 
+        }
+        public QRConfig GetConfig()
+        {
+            QRConfig config = new QRConfig();
+
+            config.Size = cmbSize.SelectedItem.ToString();
+            config.CharsetSoucer = cmbCharsetSouce.SelectedItem.ToString();
+            config.CharsetTarget = cmbCharsetTarget.SelectedItem.ToString();
+            config.ECC = cmbECC.SelectedItem.ToString()[0];
+            config.Color = cmbBGColor.SelectedItem.ToString();
+            config.BGColor = cmbBGColor.SelectedItem.ToString();
+            config.Margin = Convert.ToInt32(cmbMargin.SelectedItem.ToString());
+            config.QZone = Convert.ToInt32(cmbQZone.SelectedItem.ToString());
+            config.Format = cmbFormat.SelectedItem.ToString();
+
+
+            return config;
         }
 
 
