@@ -66,6 +66,9 @@
     <Compile Include="UcQrConfing.Designer.cs">
       <DependentUpon>UcQrConfing.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\FrmQRCodeURL.resx">
+      <DependentUpon>FrmQRCodeURL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMDI.resx">
       <DependentUpon>FrmMDI.cs</DependentUpon>
     </EmbeddedResource>
